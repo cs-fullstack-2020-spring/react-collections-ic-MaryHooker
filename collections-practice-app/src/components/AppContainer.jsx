@@ -8,9 +8,9 @@ class AppContainer extends Component {
     }
     render() { 
         //save imported rawData under variable
-        let rawData = require(`./rawData`)
+        const rawData = require(`./rawData`)
         //sanity
-        console.table(rawData);
+        // console.table(rawData);
 
         return ( 
             <div>

@@ -7,9 +7,9 @@ class ToDoCollector extends Component {
         this.state = {}
     }
 
-    componentDidMount(){
-        console.log(this.props.rawData)
-    }
+    // componentDidMount(){
+    //     console.table(this.props.rawData)
+    // }
     
     // "postId": 1,
     // "id": 1,
@@ -17,16 +17,16 @@ class ToDoCollector extends Component {
     // "email": "Eliseo@gardner.biz",
     // "body":
         render(){
-            
+            console.table(this.props.rawData)
             return (
                 <div>
                     <h2>Collector Component</h2>
                     {
-                        this.props.rawData.map((data,index) => {
+                        this.props.rawData.map((data) => {
                             return (
-                                <div key={index}>
-                                <ToDo key={index} dataInfo={data}/>     
-                                </div>
+                                
+                                <ToDo key={data.id} dataInfo={data}/>     
+                               
                             )
                         }
 
